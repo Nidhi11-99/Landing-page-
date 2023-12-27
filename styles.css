@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css?family=Gugi&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+@media only screen and ( max-width: 650px ) {
+    nav {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 50px;
+    }
+    nav > ul {
+        margin-top: 10px;
+        flex-wrap: wrap;
+    }
+    .product-main-content, .home {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .product-main-content {
+        padding: 50px;
+    }
+    .product-text {
+        width: 100%;  
+        margin-bottom: 15px;
+    }
+    .main-content {
+        padding-top: 50px;
+    }
+    
+    .prices-table {
+        width: 20px;
+    }
+    .price-value {
+        width: 10px;
+    }
+    .price-char {
+        padding: 5px 5px;
+        height: 5px;
+       }
+}
+
+@media ( min-width: 320px) {
+    .email-submit {
+        width: 250px;
+        margin: 0 auto;
+    }
+}
+
+@media ( min-width: 800px ) {
+    .product-text {
+        width: 70%;
+    }
+    .email-submit {
+        margin: 0;
+        width: 400px;
+    }
+}
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color-1: #ba208e;
+    --background-color-2: #e37676;
+    --background-color-3: #ba208e;
+}
+
+::selection {
+    background-color: #d11b9d;
+    color: white;
+}
+
+body {
+    font-family: 'Bradley Hand', cursive;
+    background: linear-gradient(45deg, #e37676 25%, #e08282, #f5b8b8, #fcb3b3); 
+}
+
+img {
+    height: 50%;
+    width: 50%;
+}
+
+a {
+    text-decoration: none;
+    color: #2b022b;
+}
+
+a:hover {
+    transition: 0.2s;
+    color: #300329;
+}
+
+a:active {
+    color: #f598e5;
+}
+
+/* Here goes all the navbar elements */
+nav {
+    background-color: var(--background-color-1);
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 14.5px;
+    width: 100%;
+    padding: 20px 65px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+nav ul > li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+nav ul li > a {
+    border-bottom: 2px solid transparent;
+    color: #f4f0f5;
+}
+
+nav ul li > a:hover {
+    border-bottom: 2px solid #633f63;
+    color: #2b022b;
+}
+
+nav ul li > a:active {
+    border-bottom: 2px solid #633f63;
+    color: #546562 ;
+}
+/* */
+
+.home, .quote, .prices {
+    color: white;
+    text-align: center;
+}
+
+.quote, .prices {
+    background-color: var(--background-color-3);
+}
+
+.logo > img {
+    filter: saturate(%) contrast(800%) brightness(0%) 
+      invert(80%) sepia(50%) hue-rotate(120deg); 
+    max-width : 100px;
+    max-height : 100px;
+    width : 100%;
+    height : 100%;
+}
+
+.site-wrapper {
+    position: relative;
+}
+
+/* Here goes the product main content elements */
+.product-main-content {
+    background: linear-gradient(45deg, #e37676 25%, #e08282, #f5b8b8, #fcb3b3); 
+    color: white;
+    width: 100%;
+    padding: 64px 64px 100px;
+    margin: 60px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: -1;
+}
+
+.product-text {
+    word-wrap: break-word;
+}
+
+.product-image {
+    width: 50vw;
+}
+
+.mc-title {
+    font-size: 28px;
+}
+
+.mc-subtitle {
+    margin: 10px 0;
+}
+
+.mc-description {
+    color: #E9E9E9;
+    margin-bottom: 5px;
+}
+
+.email-submit {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-submit > * {
+    margin: 5px 0;
+}
+
+.email-input, .email-submit-button {
+    border: 3px solid #edabe4;
+}
+
+.email-input {
+    border-radius: 0;
+    padding: 0.5em;
+}
+
+.email-submit > .button {
+    width: 90px;
+}
+
+.button {
+    font-family: cursive;
+    background-color: #db89f0;
+    color: black;
+    border: 3px solid #060606;
+    text-transform: uppercase;
+    font-weight: bold;
+    align-self: center;
+    height: 45px;
+    padding: 0.8em;
+    word-wrap: break-word;
+}
+
+.button:hover {
+    cursor: pointer;
+    transition: 0.1s;
+    background-color: #a321c4;
+}
+
+.button:active {
+    transition: 0.05s;
+    background-color: #2b022b;
+    color: white;
+}
+
+/* */
+
+/* Here goes all the "Architecture" and quote elements */
+.quote {
+    padding: 60px 0;
+}
+
+.quote blockquote > p {
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.quote blockquote > p::after {
+    content: '" '
+}
+
+.quote blockquote > p::before {
+    content: ' "'
+}
+
+.quote blockquote > figcaption {
+    font-size: 22px;
+}
+
+.flavors {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 75px;
+}
+
+.flavor-image {
+    width: 40vw;
+}
+
+.flavor-image > img {
+    border-radius: 50%;
+}
+
+.flavor-title > * {
+    margin: 15px 0;
+}
+
+.flavor-chars {
+    margin: 40px 5px;
+    text-align: left;
+}
+
+.flavor-chars > ul {
+    list-style-type: none;
+}
+
+.flavor-chars ul > li {
+    margin: 15px 0;
+}
+
+.flavor-chars ul li > * {
+    margin: 10px 0;
+}
+
+.flavor-chars ul li > h3::before {
+    content: "■";
+    margin-right: 5px;
+    color: #5E7B2A;
+}
+
+.flavor-chars ul li > p {
+    font-size: 12px;
+}
+
+/* */
+
+/* Here goes all the "Prices" elements */
+.prices {
+    padding: 35px 0;
+}
+
+.table-wrapper {
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+.table-wrapper > a {
+    margin: 20px 0;
+    display: block;
+    font-weight: bold;
+}
+
+.prices-table {
+    margin: 20px auto;
+}
+
+.price-container {
+    margin: 5px 0;
+}
+
+.price-container > .price-char {
+    text-align: left;
+    font-size: 12px;
+    border-top: 2px solid black;
+    color: black;
+    width: 500px;
+    height: 80px;
+}
+
+.price-container > .price-value {
+    text-align: right;
+    border-top: 2px solid #a30288;
+    color: #a30288;
+}
+
